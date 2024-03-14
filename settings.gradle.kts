@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Bus Boards(new)"
+rootProject.name = "Bus Boards"
 include(":app")
  
