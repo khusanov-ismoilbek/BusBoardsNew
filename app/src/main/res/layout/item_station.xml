@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="8dp"
-    android:layout_marginTop="8dp"
-    android:paddingHorizontal="8dp"
-    android:paddingTop="8dp"
-    android:gravity="center"
-    android:textColor="#FFFFFF"
-    android:textSize="16dp"
-    android:textStyle="normal"
-    tools:text="Current station" />
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStationName"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            tools:text="Amir\nTemur" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="24dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:background="#EBC500" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:background="#EBC500" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

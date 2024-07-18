@@ -1,5 +1,8 @@
 package com.archay.busboards.ui.widgets.adapter
 
+import android.content.res.Resources
+import android.graphics.Typeface
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil.ItemCallback
@@ -32,7 +35,14 @@ class StationAdapter :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind() {
-            binding.root.text = getItem(absoluteAdapterPosition).stationName
+            if (absoluteAdapterPosition == 0) {
+                binding.tvStationName.setTextSize(TypedValue.COMPLEX_UNIT_SP,40f)
+                binding.tvStationName.setTypeface(binding.tvStationName.typeface, Typeface.BOLD)
+            } else {
+                binding.tvStationName.setTextSize(TypedValue.COMPLEX_UNIT_SP,40f)
+                binding.tvStationName.setTypeface(binding.tvStationName.typeface, Typeface.NORMAL)
+            }
+            binding.tvStationName.text = getItem(absoluteAdapterPosition).stationName
         }
 
     }
